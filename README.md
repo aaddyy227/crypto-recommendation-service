@@ -34,7 +34,7 @@ cd crypto-recommendation-service
 ### Build the Project
 
 ```bash
-mvn clean package
+mvn clean install
 ```
 
 ### Create the Crypto Data Folder
