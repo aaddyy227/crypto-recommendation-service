@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recommendation-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: recommendation-service
+  template:
+    metadata:
+      labels:
+        app: recommendation-service
+    spec:
+      containers:
+        - name: recommendation-service
+          image: your-dockerhub-username/recommendation-service:latest
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"
