@@ -161,18 +161,19 @@ To deploy the application to a production environment, follow these steps:
 Docker
 If you are using Docker, first build the Docker image:
 
-bash
+``` bash
 Copy code
 docker build -t crypto-recommendation-service .
 Then, run the container:
 
-bash
-Copy code
+```bash
 docker run -p 8080:8080 crypto-recommendation-service
+```
 Kubernetes
 For Kubernetes deployment, use the provided YAML files in the k8s directory:
 
-bash
-Copy code
+```bash
+
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
+```
