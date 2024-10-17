@@ -20,7 +20,11 @@ import java.io.InputStreamReader;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 @Service
 public class CryptoDataLoader {
@@ -70,6 +74,7 @@ public class CryptoDataLoader {
     public String extractSymbolFromFileName(String fileName) {
         return fileName.split("_")[0];
     }
+
     public List<CryptoPrice> loadCryptoData(String symbol, InputStream inputStream) {
         List<CryptoPrice> prices = new ArrayList<>();
         try (CSVReader reader = new CSVReader(new InputStreamReader(inputStream))) {
