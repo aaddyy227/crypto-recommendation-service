@@ -158,18 +158,19 @@ http://localhost:8080/swagger-ui/index.html
 ### Deploying to Production
 To deploy the application to a production environment, follow these steps:
 
-Docker
+### Docker
 If you are using Docker, first build the Docker image:
 
-``` bash
-Copy code
+```bash
 docker build -t crypto-recommendation-service .
+```
+
 Then, run the container:
 
 ```bash
 docker run -p 8080:8080 crypto-recommendation-service
 ```
-Kubernetes
+### Kubernetes
 For Kubernetes deployment, use the provided YAML files in the k8s directory:
 
 ```bash
